@@ -1,6 +1,6 @@
 /**
  * i-CAR — Каталог автомобилей
- * Данные из Avito с реальными фото
+ * Все автомобили с Avito
  */
 
 // Данные автомобилей
@@ -336,10 +336,13 @@ const carsData = [
 function generateCarCard(car) {
   const badgeHTML = car.badge ? `<div class="car-badge ${car.badge === 'Хит' ? 'hot' : car.badge === 'Премиум' ? 'premium' : car.badge === 'Электро' ? 'eco' : ''}">${car.badge}</div>` : '';
 
+  // Используем placeholder если фото не загрузится
+  const placeholderText = encodeURIComponent(car.name + ' ' + car.year);
+
   return `
         <div class="car-card" data-category="${car.category}" data-price="${car.priceNumeric}">
             <div class="car-image">
-                <img src="${car.image}" alt="${car.name}" loading="lazy" onerror="this.style.background='#1a1a1a';this.style.display='none';this.parentElement.innerHTML+='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#666;font-size:14px;\'>${car.name}</div>'">
+                <img src="${car.image}" alt="${car.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a1a1a;color:#fff;font-size:14px;text-align:center;padding:20px;flex-direction:column;gap:10px;\'><i class=\'fas fa-car\' style=\'font-size:40px;opacity:0.5;\'></i><span>${car.name}</span><span style=\'font-size:12px;color:#888;\'>${car.year} г.</span></div>'">
                 ${badgeHTML}
                 <div class="car-actions">
                     <button class="action-btn"><i class="far fa-heart"></i></button>
