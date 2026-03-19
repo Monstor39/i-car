@@ -1,18 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог автомобилей — i-CAR</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/catalog.css">
     <link rel="stylesheet" href="../css/mobile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Стили для каталога */
+        .page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .page-header h1 span {
+            color: var(--primary);
+        }
+        
+        .page-header p {
+            color: var(--gray);
+            font-size: 18px;
+        }
+        
+        .catalog-full {
+            padding: 60px 0 100px;
+        }
+        
+        .catalog-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .results-count {
+            font-size: 16px;
+            color: var(--gray);
+        }
+        
+        .results-count span {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .sort-options {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .sort-select {
+            padding: 10px 20px;
+            border: 2px solid var(--gray-light);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 12px 28px;
+            border: 2px solid var(--gray-light);
+            border-radius: 50px;
+            background: var(--light);
+            color: var(--secondary);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            border-color: var(--primary);
+            color: var(--light);
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        .page-btn {
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--gray-light);
+            background: var(--light);
+            border-radius: 10px;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .page-btn:hover,
+        .page-btn.active {
+            background: var(--gradient-primary);
+            border-color: var(--primary);
+            color: var(--light);
+        }
+        
+        /* Мобильная версия */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 100px 15px 40px;
+            }
+            
+            .page-header h1 {
+                font-size: 32px;
+            }
+            
+            .catalog-toolbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .sort-options {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .sort-select {
+                width: 100%;
+            }
+            
+            .filter-tabs {
+                gap: 8px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
-
 <body>
     <!-- Навигация -->
     <nav class="navbar">
@@ -41,130 +195,56 @@
         </div>
     </nav>
 
-    <!-- Заголовок страницы -->
+    <!-- Заголовок -->
     <section class="page-header">
         <div class="container">
             <h1>Каталог <span>автомобилей</span></h1>
-            <p>Выберите автомобиль своей мечты из нашего каталога</p>
+            <p>Все автомобили в наличии с фото и характеристиками</p>
         </div>
     </section>
 
     <!-- Каталог -->
     <section class="catalog-full">
         <div class="container">
-            <div class="catalog-layout">
-                <!-- Боковая панель с фильтрами -->
-                <aside class="filters-sidebar">
-                    <div class="filter-section">
-                        <h3><i class="fas fa-car"></i> Кузов</h3>
-                        <div class="filter-options">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="sedan" checked>
-                                <span class="checkmark"></span>
-                                Седаны
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="suv" checked>
-                                <span class="checkmark"></span>
-                                Внедорожники
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="sport" checked>
-                                <span class="checkmark"></span>
-                                Спорткары
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="hatchback" checked>
-                                <span class="checkmark"></span>
-                                Хетчбэки
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="coupe" checked>
-                                <span class="checkmark"></span>
-                                Купе
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="van" checked>
-                                <span class="checkmark"></span>
-                                Микроавтобусы
-                            </label>
-                        </div>
-                    </div>
+            <!-- Фильтры -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="sedan">Седаны</button>
+                <button class="filter-btn" data-filter="suv">Внедорожники</button>
+                <button class="filter-btn" data-filter="sport">Спорт</button>
+                <button class="filter-btn" data-filter="hatchback">Хетчбэки</button>
+                <button class="filter-btn" data-filter="coupe">Купе</button>
+            </div>
 
-                    <div class="filter-section">
-                        <h3><i class="fas fa-tag"></i> Цена</h3>
-                        <div class="price-range">
-                            <div class="range-inputs">
-                                <input type="number" class="price-from" placeholder="От" value="1000000">
-                                <input type="number" class="price-to" placeholder="До" value="15000000">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <h3><i class="fas fa-gas-pump"></i> Тип двигателя</h3>
-                        <div class="filter-options">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="engine" value="Бензин" checked>
-                                <span class="checkmark"></span>
-                                Бензин
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="engine" value="Дизель" checked>
-                                <span class="checkmark"></span>
-                                Дизель
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="engine" value="Электро" checked>
-                                <span class="checkmark"></span>
-                                Электро
-                            </label>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary btn-block apply-filters">
-                        <i class="fas fa-filter"></i> Применить фильтры
-                    </button>
-                    <button class="btn btn-outline btn-block reset-filters">
-                        <i class="fas fa-undo"></i> Сбросить
-                    </button>
-                </aside>
-
-                <!-- Каталог -->
-                <div class="catalog-content">
-                    <!-- Сортировка -->
-                    <div class="catalog-toolbar">
-                        <div class="results-count">
-                            <span id="resultsCount">25</span> автомобилей найдено
-                        </div>
-                        <div class="sort-options">
-                            <label>Сортировать:</label>
-                            <select class="sort-select">
-                                <option value="popular">По популярности</option>
-                                <option value="price-asc">По цене (возрастание)</option>
-                                <option value="price-desc">По цене (убывание)</option>
-                                <option value="year">По году выпуска</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Сетка автомобилей -->
-                    <div class="cars-grid catalog-grid" id="catalogGrid">
-                        <!-- Автомобили загружаются из catalog-cars.js -->
-                    </div>
-
-                    <!-- Пагинация -->
-                    <div class="pagination">
-                        <a href="#" class="page-btn active">1</a>
-                        <a href="#" class="page-btn">2</a>
-                        <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
-                    </div>
+            <!-- Toolbar -->
+            <div class="catalog-toolbar">
+                <div class="results-count">
+                    <span id="resultsCount">25</span> автомобилей
                 </div>
+                <div class="sort-options">
+                    <label>Сортировка:</label>
+                    <select class="sort-select" id="sortSelect">
+                        <option value="default">По умолчанию</option>
+                        <option value="price-asc">По цене (возрастание)</option>
+                        <option value="price-desc">По цене (убывание)</option>
+                        <option value="year">По году</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Сетка авто -->
+            <div class="cars-grid" id="catalogGrid"></div>
+
+            <!-- Пагинация -->
+            <div class="pagination">
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- CTA секция -->
+    <!-- CTA -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
@@ -209,8 +289,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Контакты</h4>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+79118508844"
-                            style="color: inherit; text-decoration: none;">+7 (911) 850-88-44</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79118508844" style="color: inherit; text-decoration: none;">+7 (911) 850-88-44</a></p>
                     <p><i class="fas fa-envelope"></i> info@icar.ru</p>
                     <p><i class="fas fa-map-marker-alt"></i> г. Калининград, ул. Энергетиков, 23</p>
                 </div>
@@ -228,64 +307,83 @@
     <script src="../js/main.js"></script>
     <script src="../js/catalog-cars.js"></script>
     <script>
-        // Загрузка каталога - ТОЧНО ТАК ЖЕ КАК НА ГЛАВНОЙ
-        document.addEventListener('DOMContentLoaded', function () {
-            const catalogGrid = document.getElementById('catalogGrid');
-            if (catalogGrid && typeof carsData !== 'undefined') {
-                // Показываем ВСЕ автомобили
-                catalogGrid.innerHTML = carsData.map(car => `
-                    <div class="car-card" data-category="${car.category}" data-price="${car.priceNumeric}">
-                        <div class="car-image">
-                            <img src="${car.image}" alt="${car.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a1a1a;color:#fff;font-size:14px;text-align:center;padding:20px;flex-direction:column;gap:10px;\'><i class=\'fas fa-car\' style=\'font-size:40px;opacity:0.5;\'></i><span>${car.name}</span><span style=\'font-size:12px;color:#888;\'>${car.year} г.</span></div>'">
-                            ${car.badge ? `<div class="car-badge ${car.badge === 'Хит' ? 'hot' : car.badge === 'Премиум' ? 'premium' : car.badge === 'Электро' ? 'eco' : ''}">${car.badge}</div>` : ''}
-                            <div class="car-actions">
-                                <button class="action-btn"><i class="far fa-heart"></i></button>
-                                <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                <button class="action-btn"><i class="fas fa-share"></i></button>
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.getElementById('catalogGrid');
+            const countEl = document.getElementById('resultsCount');
+            const sortSelect = document.getElementById('sortSelect');
+            
+            if (grid && typeof carsData !== 'undefined') {
+                let cars = [...carsData];
+                
+                // Рендеринг
+                function render(carsToRender) {
+                    grid.innerHTML = carsToRender.map(car => `
+                        <div class="car-card" data-category="${car.category}" data-price="${car.priceNumeric}" data-year="${car.year}">
+                            <div class="car-image">
+                                <img src="${car.image}" alt="${car.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div style=\\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a1a1a;color:#fff;font-size:14px;text-align:center;padding:20px;flex-direction:column;gap:10px;\\'><i class=\\'fas fa-car\\' style=\\'font-size:40px;opacity:0.5;\\'></i><span>${car.name}</span><span style=\\'font-size:12px;color:#888;\\'>${car.year} г.</span></div>'">
+                                ${car.badge ? `<div class="car-badge ${car.badge === 'Хит' ? 'hot' : car.badge === 'Премиум' ? 'premium' : car.badge === 'Электро' ? 'eco' : ''}">${car.badge}</div>` : ''}
+                                <div class="car-actions">
+                                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
+                                    <button class="action-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                            <div class="car-info">
+                                <h3 class="car-name">${car.name}</h3>
+                                <p class="car-price">${car.price}</p>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-tachometer-alt"></i> ${car.mileage}</span>
+                                    <span><i class="fas fa-gas-pump"></i> ${car.fuel}</span>
+                                    <span><i class="fas fa-cog"></i> ${car.transmission}</span>
+                                </div>
+                                <button class="btn btn-primary btn-block" onclick="window.location.href='tel:+79118508844'">Позвонить</button>
                             </div>
                         </div>
-                        <div class="car-info">
-                            <h3 class="car-name">${car.name}</h3>
-                            <p class="car-price">${car.price}</p>
-                            <div class="car-specs">
-                                <span><i class="fas fa-tachometer-alt"></i> ${car.mileage}</span>
-                                <span><i class="fas fa-gas-pump"></i> ${car.fuel}</span>
-                                <span><i class="fas fa-cog"></i> ${car.transmission}</span>
-                            </div>
-                            <button class="btn btn-primary btn-block" onclick="alert('Звоните: +7 (911) 850-88-44')">Подробнее</button>
-                        </div>
-                    </div>
-                `).join('');
-
-                console.log('✅ Каталог загружен:', carsData.length, 'авто');
-            }
-
-            // Простая фильтрация
-            document.querySelectorAll('.apply-filters').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-                    const selectedCategories = Array.from(checkboxes).map(cb => cb.value);
-
-                    document.querySelectorAll('.car-card').forEach(card => {
-                        const category = card.dataset.category;
-                        if (selectedCategories.includes('all') || selectedCategories.includes(category)) {
-                            card.style.display = 'block';
+                    `).join('');
+                    
+                    if (countEl) countEl.textContent = carsToRender.length;
+                }
+                
+                // Первый рендер
+                render(cars);
+                
+                // Фильтры
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        const filter = this.dataset.filter;
+                        if (filter === 'all') {
+                            render(cars);
                         } else {
-                            card.style.display = 'none';
+                            const filtered = cars.filter(c => c.category === filter);
+                            render(filtered);
                         }
                     });
                 });
-            });
-
-            // Сброс фильтров
-            document.querySelectorAll('.reset-filters').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = true);
-                    document.querySelectorAll('.car-card').forEach(card => card.style.display = 'block');
-                });
-            });
+                
+                // Сортировка
+                if (sortSelect) {
+                    sortSelect.addEventListener('change', function() {
+                        const value = this.value;
+                        let sorted = [...cars];
+                        
+                        if (value === 'price-asc') {
+                            sorted.sort((a, b) => a.priceNumeric - b.priceNumeric);
+                        } else if (value === 'price-desc') {
+                            sorted.sort((a, b) => b.priceNumeric - a.priceNumeric);
+                        } else if (value === 'year') {
+                            sorted.sort((a, b) => b.year - a.year);
+                        }
+                        
+                        render(sorted);
+                    });
+                }
+                
+                console.log('✅ Каталог загружен:', cars.length, 'авто');
+            }
         });
     </script>
 </body>
-
 </html>
