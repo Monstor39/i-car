@@ -45,11 +45,11 @@
     <section class="page-header">
         <div class="container">
             <h1>Каталог <span>автомобилей</span></h1>
-            <p>Выберите автомобиль своей мечты из нашего обширного каталога</p>
+            <p>Выберите автомобиль своей мечты из нашего каталога</p>
         </div>
     </section>
 
-    <!-- Фильтры и каталог -->
+    <!-- Каталог -->
     <section class="catalog-full">
         <div class="container">
             <div class="catalog-layout">
@@ -74,14 +74,19 @@
                                 Спорткары
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="electric" checked>
-                                <span class="checkmark"></span>
-                                Электрокары
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="body" value="hatchback">
+                                <input type="checkbox" name="body" value="hatchback" checked>
                                 <span class="checkmark"></span>
                                 Хетчбэки
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="body" value="coupe" checked>
+                                <span class="checkmark"></span>
+                                Купе
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="body" value="van" checked>
+                                <span class="checkmark"></span>
+                                Микроавтобусы
                             </label>
                         </div>
                     </div>
@@ -93,41 +98,6 @@
                                 <input type="number" class="price-from" placeholder="От" value="1000000">
                                 <input type="number" class="price-to" placeholder="До" value="15000000">
                             </div>
-                            <div class="range-slider">
-                                <div class="range-track">
-                                    <div class="range-progress"></div>
-                                </div>
-                                <div class="range-handles">
-                                    <div class="handle handle-left"></div>
-                                    <div class="handle handle-right"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <h3><i class="fas fa-road"></i> Пробег</h3>
-                        <div class="filter-options">
-                            <label class="radio-label">
-                                <input type="radio" name="mileage" value="all" checked>
-                                <span></span>
-                                Любой
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="mileage" value="0-30000">
-                                <span></span>
-                                До 30 000 км
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="mileage" value="30000-70000">
-                                <span></span>
-                                30 000 - 70 000 км
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="mileage" value="70000+">
-                                <span></span>
-                                Более 70 000 км
-                            </label>
                         </div>
                     </div>
 
@@ -135,24 +105,19 @@
                         <h3><i class="fas fa-gas-pump"></i> Тип двигателя</h3>
                         <div class="filter-options">
                             <label class="checkbox-label">
-                                <input type="checkbox" name="engine" value="petrol" checked>
+                                <input type="checkbox" name="engine" value="Бензин" checked>
                                 <span class="checkmark"></span>
                                 Бензин
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" name="engine" value="diesel" checked>
+                                <input type="checkbox" name="engine" value="Дизель" checked>
                                 <span class="checkmark"></span>
                                 Дизель
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" name="engine" value="electric" checked>
+                                <input type="checkbox" name="engine" value="Электро" checked>
                                 <span class="checkmark"></span>
                                 Электро
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="engine" value="hybrid">
-                                <span class="checkmark"></span>
-                                Гибрид
                             </label>
                         </div>
                     </div>
@@ -170,7 +135,7 @@
                     <!-- Сортировка -->
                     <div class="catalog-toolbar">
                         <div class="results-count">
-                            <span id="resultsCount">24</span> автомобиля найдено
+                            <span id="resultsCount">25</span> автомобилей найдено
                         </div>
                         <div class="sort-options">
                             <label>Сортировать:</label>
@@ -179,250 +144,19 @@
                                 <option value="price-asc">По цене (возрастание)</option>
                                 <option value="price-desc">По цене (убывание)</option>
                                 <option value="year">По году выпуска</option>
-                                <option value="mileage">По пробегу</option>
                             </select>
                         </div>
-                        <div class="view-toggle">
-                            <button class="view-btn active" data-view="grid">
-                                <i class="fas fa-th-large"></i>
-                            </button>
-                            <button class="view-btn" data-view="list">
-                                <i class="fas fa-list"></i>
-                            </button>
-                        </div>
                     </div>
 
-                    <!-- Сетка автомобилей - загружается из catalog-cars.js -->
-                    <div class="cars-grid catalog-grid"></div>
-
-                    <!-- Пагинация -->
-                    <div class="pagination">
-                        <!-- Карточка авто 1 -->
-                        <div class="car-card" data-category="sedan">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600"
-                                    alt="BMW 5 Series">
-                                <div class="car-badge">Новинка</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">BMW 5 Series</h3>
-                                <p class="car-price">4 500 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 25 000 км</span>
-                                    <span><i class="fas fa-gas-pump"></i> Бензин</span>
-                                    <span><i class="fas fa-cog"></i> Автомат</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 2 -->
-                        <div class="car-card" data-category="suv">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1609521263047-f8f2052b7e73?w=600"
-                                    alt="Mercedes GLE">
-                                <div class="car-badge hot">Хит</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Mercedes-Benz GLE</h3>
-                                <p class="car-price">7 200 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 15 000 км</span>
-                                    <span><i class="fas fa-gas-pump"></i> Дизель</span>
-                                    <span><i class="fas fa-cog"></i> Автомат</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 3 -->
-                        <div class="car-card" data-category="sport">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=600"
-                                    alt="Porsche 911">
-                                <div class="car-badge premium">Премиум</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Porsche 911</h3>
-                                <p class="car-price">12 500 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 8 000 км</span>
-                                    <span><i class="fas fa-gas-pump"></i> Бензин</span>
-                                    <span><i class="fas fa-cog"></i> Робот</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 4 -->
-                        <div class="car-card" data-category="electric">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600"
-                                    alt="Tesla Model S">
-                                <div class="car-badge eco">Электро</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Tesla Model S</h3>
-                                <p class="car-price">6 800 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 12 000 км</span>
-                                    <span><i class="fas fa-bolt"></i> Электро</span>
-                                    <span><i class="fas fa-cog"></i> Автомат</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 5 -->
-                        <div class="car-card" data-category="sedan">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1555215695-3004980adade?w=600"
-                                    alt="Audi A8">
-                                <div class="car-badge">Новинка</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Audi A8</h3>
-                                <p class="car-price">5 900 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 20 000 км</span>
-                                    <span><i class="fas fa-gas-pump"></i> Бензин</span>
-                                    <span><i class="fas fa-cog"></i> Автомат</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 6 -->
-                        <div class="car-card" data-category="suv">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600"
-                                    alt="Range Rover">
-                                <div class="car-badge premium">Премиум</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Range Rover Sport</h3>
-                                <p class="car-price">8 500 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 18 000 км</span>
-                                    <span><i class="fas fa-gas-pump"></i> Дизель</span>
-                                    <span><i class="fas fa-cog"></i> Автомат</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 7 -->
-                        <div class="car-card" data-category="sedan">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1606152421811-99de95bd6b52?w=600"
-                                    alt="Mercedes E-Class">
-                                <div class="car-badge">Новинка</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Mercedes E-Class</h3>
-                                <p class="car-price">4 200 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 35 000 км</span>
-                                    <span><i class="fas fa-gas-pump"></i> Бензин</span>
-                                    <span><i class="fas fa-cog"></i> Автомат</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 8 -->
-                        <div class="car-card" data-category="sport">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=600"
-                                    alt="Audi RS7">
-                                <div class="car-badge premium">Премиум</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Audi RS7</h3>
-                                <p class="car-price">9 800 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 10 000 км</span>
-                                    <span><i class="fas fa-gas-pump"></i> Бензин</span>
-                                    <span><i class="fas fa-cog"></i> Робот</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
-
-                        <!-- Карточка авто 9 -->
-                        <div class="car-card" data-category="electric">
-                            <div class="car-image">
-                                <img src="https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?w=600"
-                                    alt="Tesla Model 3">
-                                <div class="car-badge eco">Электро</div>
-                                <div class="car-actions">
-                                    <button class="action-btn"><i class="fas fa-heart"></i></button>
-                                    <button class="action-btn"><i class="fas fa-expand"></i></button>
-                                    <button class="action-btn"><i class="fas fa-share"></i></button>
-                                </div>
-                            </div>
-                            <div class="car-info">
-                                <h3 class="car-name">Tesla Model 3</h3>
-                                <p class="car-price">3 900 000 ₽</p>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-tachometer-alt"></i> 22 000 км</span>
-                                    <span><i class="fas fa-bolt"></i> Электро</span>
-                                    <span><i class="fas fa-cog"></i> Автомат</span>
-                                </div>
-                                <button class="btn btn-primary btn-block">Подробнее</button>
-                            </div>
-                        </div>
+                    <!-- Сетка автомобилей -->
+                    <div class="cars-grid catalog-grid" id="catalogGrid">
+                        <!-- Автомобили загружаются из catalog-cars.js -->
                     </div>
 
                     <!-- Пагинация -->
                     <div class="pagination">
-                        <a href="#" class="page-btn"><i class="fas fa-chevron-left"></i></a>
                         <a href="#" class="page-btn active">1</a>
                         <a href="#" class="page-btn">2</a>
-                        <a href="#" class="page-btn">3</a>
-                        <a href="#" class="page-btn">4</a>
-                        <a href="#" class="page-btn"><i class="fas fa-ellipsis-h"></i></a>
-                        <a href="#" class="page-btn">10</a>
                         <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -494,20 +228,61 @@
     <script src="../js/main.js"></script>
     <script src="../js/catalog-cars.js"></script>
     <script>
-        // Исправление путей к фото для каталога
+        // Загрузка каталога - ТОЧНО ТАК ЖЕ КАК НА ГЛАВНОЙ
         document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.car-card img').forEach(img => {
-                const src = img.getAttribute('src');
-                if (src && !src.startsWith('photo/') && !src.startsWith('http')) {
-                    // Это старое фото - заменяем на новое
-                    const carName = img.alt;
-                    const newSrc = `../photo/${carName}`;
-                    img.src = newSrc;
-                    img.onerror = function () {
-                        this.style.display = 'none';
-                        this.parentElement.innerHTML += `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a1a1a;color:#888;font-size:14px;text-align:center;padding:20px;">${carName}</div>`;
-                    };
-                }
+            const catalogGrid = document.getElementById('catalogGrid');
+            if (catalogGrid && typeof carsData !== 'undefined') {
+                // Показываем ВСЕ автомобили
+                catalogGrid.innerHTML = carsData.map(car => `
+                    <div class="car-card" data-category="${car.category}" data-price="${car.priceNumeric}">
+                        <div class="car-image">
+                            <img src="${car.image}" alt="${car.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a1a1a;color:#fff;font-size:14px;text-align:center;padding:20px;flex-direction:column;gap:10px;\'><i class=\'fas fa-car\' style=\'font-size:40px;opacity:0.5;\'></i><span>${car.name}</span><span style=\'font-size:12px;color:#888;\'>${car.year} г.</span></div>'">
+                            ${car.badge ? `<div class="car-badge ${car.badge === 'Хит' ? 'hot' : car.badge === 'Премиум' ? 'premium' : car.badge === 'Электро' ? 'eco' : ''}">${car.badge}</div>` : ''}
+                            <div class="car-actions">
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-expand"></i></button>
+                                <button class="action-btn"><i class="fas fa-share"></i></button>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3 class="car-name">${car.name}</h3>
+                            <p class="car-price">${car.price}</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> ${car.mileage}</span>
+                                <span><i class="fas fa-gas-pump"></i> ${car.fuel}</span>
+                                <span><i class="fas fa-cog"></i> ${car.transmission}</span>
+                            </div>
+                            <button class="btn btn-primary btn-block" onclick="alert('Звоните: +7 (911) 850-88-44')">Подробнее</button>
+                        </div>
+                    </div>
+                `).join('');
+
+                console.log('✅ Каталог загружен:', carsData.length, 'авто');
+            }
+
+            // Простая фильтрация
+            document.querySelectorAll('.apply-filters').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+                    const selectedCategories = Array.from(checkboxes).map(cb => cb.value);
+
+                    document.querySelectorAll('.car-card').forEach(card => {
+                        const category = card.dataset.category;
+                        if (selectedCategories.includes('all') || selectedCategories.includes(category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Сброс фильтров
+            document.querySelectorAll('.reset-filters').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = true);
+                    document.querySelectorAll('.car-card').forEach(card => card.style.display = 'block');
+                });
             });
         });
     </script>
