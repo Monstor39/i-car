@@ -16,7 +16,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": "Новинка",
-    "image": "../../photo/BMW 5 серия 2.0 AT, 2020, 89 998 км.webp"
+    "image": "../photo/BMW 5 серия 2.0 AT, 2020, 89 998 км.webp"
   },
   {
     "name": "BMW 5 серия",
