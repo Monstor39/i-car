@@ -16,7 +16,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": "Новинка",
-    "image": "../photo/BMW 5 серия 2.0 AT, 2020, 89 998 км.webp"
+    "image": "photo/BMW 5 серия 2.0 AT, 2020, 89 998 км.webp"
   },
   {
     "name": "BMW 5 серия",
@@ -29,7 +29,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": null,
-    "image": "../photo/BMW 5 серия 3.0 AT, 2021, 95 000 км.webp"
+    "image": "photo/BMW 5 серия 3.0 AT, 2021, 95 000 км.webp"
   },
   {
     "name": "Skoda Kodiaq",
@@ -42,7 +42,7 @@ const carsData = [
     "transmission": "Робот",
     "category": "suv",
     "badge": "Хит",
-    "image": "../photo/Skoda Kodiaq 1.5 AMT, 2021, 104 616 км.UwOQUOqzosrJa22DqFtdXUPaT5cwATk6lXINXbbb5K0"
+    "image": "photo/Skoda Kodiaq 1.5 AMT, 2021, 104 616 км.UwOQUOqzosrJa22DqFtdXUPaT5cwATk6lXINXbbb5K0"
   },
   {
     "name": "BMW X5",
@@ -55,7 +55,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "suv",
     "badge": null,
-    "image": "../photo/BMW X5 3.0 AT, 2015, 214 137 км.webp"
+    "image": "photo/BMW X5 3.0 AT, 2015, 214 137 км.webp"
   },
   {
     "name": "BMW X5",
@@ -68,7 +68,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "suv",
     "badge": null,
-    "image": "../photo/BMW X5 3.0 AT, 2016, 211 290 км.VDzD9u5u6dBu2dyGZTb8dQUn4s2xSDGUEwLrTuS0eLE"
+    "image": "photo/BMW X5 3.0 AT, 2016, 211 290 км.VDzD9u5u6dBu2dyGZTb8dQUn4s2xSDGUEwLrTuS0eLE"
   },
   {
     "name": "Kia K3",
@@ -81,7 +81,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": null,
-    "image": "../photo/Kia K3 1.6 AT, 2020, 35 135 км.IKWyRcqI45foY7WX2VB0lSlRhmDq2ihxsl1SMlD5J7k"
+    "image": "photo/Kia K3 1.6 AT, 2020, 35 135 км.IKWyRcqI45foY7WX2VB0lSlRhmDq2ihxsl1SMlD5J7k"
   },
   {
     "name": "Kia K3",
@@ -94,7 +94,7 @@ const carsData = [
     "transmission": "Вариатор",
     "category": "sedan",
     "badge": "Новинка",
-    "image": "../photo/Kia K3 1.6 CVT, 2022, 42 523 км.T-U_XOZL6fxtKcRS65ITOyLbvc6CQ3L6r8IQxMAADyc"
+    "image": "photo/Kia K3 1.6 CVT, 2022, 42 523 км.T-U_XOZL6fxtKcRS65ITOyLbvc6CQ3L6r8IQxMAADyc"
   },
   {
     "name": "Skoda Scala",
@@ -107,7 +107,7 @@ const carsData = [
     "transmission": "Робот",
     "category": "hatchback",
     "badge": null,
-    "image": "../photo/Skoda Scala 1.0 AMT, 2021, 81 366 км.webp"
+    "image": "photo/Skoda Scala 1.0 AMT, 2021, 81 366 км.webp"
   },
   {
     "name": "Renault Kangoo",
@@ -120,7 +120,7 @@ const carsData = [
     "transmission": "Механика",
     "category": "van",
     "badge": null,
-    "image": "../photo/Renault Kangoo 1.5 MT, 2022, 93 000 км.webp"
+    "image": "photo/Renault Kangoo 1.5 MT, 2022, 93 000 км.webp"
   },
   {
     "name": "BMW 6 серия",
@@ -133,7 +133,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "coupe",
     "badge": null,
-    "image": "../photo/BMW 6 серия 3.0 AT, 2013, 141 000 км.webp"
+    "image": "photo/BMW 6 серия 3.0 AT, 2013, 141 000 км.webp"
   },
   {
     "name": "Mazda 3",
@@ -146,7 +146,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": "Новинка",
-    "image": "../photo/Mazda 3 2.5 AT, 2022, 38 970 км.XnGdTCtqZRru52-ixBg6EQPqtk4ZnXJ173JW8xICYMs"
+    "image": "photo/Mazda 3 2.5 AT, 2022, 38 970 км.XnGdTCtqZRru52-ixBg6EQPqtk4ZnXJ173JW8xICYMs"
   },
   {
     "name": "Kia Sorento",
@@ -159,7 +159,7 @@ const carsData = [
     "transmission": "Робот",
     "category": "suv",
     "badge": null,
-    "image": "../photo/Kia Sorento 2.2 AMT, 2020, 101 981 к.Uw7y-hIasMxH7V8J2e44o8OQ3sT_fFGPy2kRqoc9pNE"
+    "image": "photo/Kia Sorento 2.2 AMT, 2020, 101 981 к.Uw7y-hIasMxH7V8J2e44o8OQ3sT_fFGPy2kRqoc9pNE"
   },
   {
     "name": "Mercedes-Benz E-класс",
@@ -172,7 +172,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": null,
-    "image": "../photo/Mercedes-Benz E-класс 3.2 AT, 1993, 363 350 км.Y1KejqfdneO8JIS_0kjNiVgHAwvYAnPBE7JsI6XPjvQ"
+    "image": "photo/Mercedes-Benz E-класс 3.2 AT, 1993, 363 350 км.Y1KejqfdneO8JIS_0kjNiVgHAwvYAnPBE7JsI6XPjvQ"
   },
   {
     "name": "Mercedes-Benz E-класс",
@@ -185,7 +185,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": null,
-    "image": "../photo/Mercedes-Benz E-класс 2.0 AT, 2017, 156 198 км.Vtv2_ZaA19Go--cy5dzp8VMQLXzCy6N05_nQtqLAUNw"
+    "image": "photo/Mercedes-Benz E-класс 2.0 AT, 2017, 156 198 км.Vtv2_ZaA19Go--cy5dzp8VMQLXzCy6N05_nQtqLAUNw"
   },
   {
     "name": "Porsche Cayenne",
@@ -198,7 +198,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "suv",
     "badge": "Премиум",
-    "image": "../photo/Porsche Cayenne 3.0 AT, 2010, 192 100 км.q5al7Fe3k-5xUUJEwoqaSfSBfOnWfQZVAufB_Clclkk"
+    "image": "photo/Porsche Cayenne 3.0 AT, 2010, 192 100 км.q5al7Fe3k-5xUUJEwoqaSfSBfOnWfQZVAufB_Clclkk"
   },
   {
     "name": "BMW 2 серия Gran Coupe",
@@ -211,7 +211,7 @@ const carsData = [
     "transmission": "Робот",
     "category": "sedan",
     "badge": null,
-    "image": "../photo/BMW 2 серия Gran Coupe 1.5 AMT, 2021, 49 556 км.9vJUaUPAUaRtPP1__U_T4qocX8lvhyvoe-2o15_d4S4"
+    "image": "photo/BMW 2 серия Gran Coupe 1.5 AMT, 2021, 49 556 км.9vJUaUPAUaRtPP1__U_T4qocX8lvhyvoe-2o15_d4S4"
   },
   {
     "name": "BMW 7 серия",
@@ -224,7 +224,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": null,
-    "image": "../photo/BMW 7 серия 3.0 AT, 2008, 346 990 км.ZWMjLLtYns-8IUCb4YYsAGsZbW3r97-s_Po-FDl9p2g"
+    "image": "photo/BMW 7 серия 3.0 AT, 2008, 346 990 км.ZWMjLLtYns-8IUCb4YYsAGsZbW3r97-s_Po-FDl9p2g"
   },
   {
     "name": "Audi A8",
@@ -237,7 +237,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": "Премиум",
-    "image": "../photo/Audi A8 3.0 AT, 2019, 133 754 км.xDSRZa5_tT9-T6-Z6wd39_yT-C9TgaynURXpr89DAok"
+    "image": "photo/Audi A8 3.0 AT, 2019, 133 754 км.xDSRZa5_tT9-T6-Z6wd39_yT-C9TgaynURXpr89DAok"
   },
   {
     "name": "BMW 7 серия",
@@ -250,7 +250,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sedan",
     "badge": null,
-    "image": "../photo/BMW 7 серия 3.0 AT, 2004, 258 000 км.XltOkRWNXkPyi6xQdce0mgoT9JxA6sPTHtfd8wteTw4"
+    "image": "photo/BMW 7 серия 3.0 AT, 2004, 258 000 км.XltOkRWNXkPyi6xQdce0mgoT9JxA6sPTHtfd8wteTw4"
   },
   {
     "name": "Porsche Taycan",
@@ -263,7 +263,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "sport",
     "badge": "Электро",
-    "image": "../photo/Porsche Taycan AT, 2021, 63 662 км.webp"
+    "image": "photo/Porsche Taycan AT, 2021, 63 662 км.webp"
   },
   {
     "name": "BMW X2",
@@ -276,7 +276,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "suv",
     "badge": null,
-    "image": "../photo/BMW X2 1.5 AT, 2021, 61 841 км.NSLb0Lq-koWE8qg1mcMyqI7Zo79BpYnTmyhF2X37f9g"
+    "image": "photo/BMW X2 1.5 AT, 2021, 61 841 км.NSLb0Lq-koWE8qg1mcMyqI7Zo79BpYnTmyhF2X37f9g"
   },
   {
     "name": "BMW X3",
@@ -289,7 +289,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "suv",
     "badge": null,
-    "image": "../photo/BMW X3 2.5 AT, 2004, 207 219 км.xcXDTCMsmXOy8ifJ8WTr1rm5K007CGHcpnaFf-qoLDU"
+    "image": "photo/BMW X3 2.5 AT, 2004, 207 219 км.xcXDTCMsmXOy8ifJ8WTr1rm5K007CGHcpnaFf-qoLDU"
   },
   {
     "name": "Daihatsu Move",
@@ -302,7 +302,7 @@ const carsData = [
     "transmission": "Вариатор",
     "category": "hatchback",
     "badge": null,
-    "image": "../photo/Daihatsu Move 0.7 CVT, 2019, 78 000 км.HaPJk7cLt1epxcujq-FxArYKwT-jAHlyoeBEpgXP9CE"
+    "image": "photo/Daihatsu Move 0.7 CVT, 2019, 78 000 км.HaPJk7cLt1epxcujq-FxArYKwT-jAHlyoeBEpgXP9CE"
   },
   {
     "name": "Hyundai Creta",
@@ -315,7 +315,7 @@ const carsData = [
     "transmission": "Автомат",
     "category": "suv",
     "badge": null,
-    "image": "../photo/Hyundai Creta 2.0 AT, 2018, 213 051 км.gCvuzqlNsAqyJ3Fb5l19zmktxBqOX6EopQhx-lDheAk"
+    "image": "photo/Hyundai Creta 2.0 AT, 2018, 213 051 км.gCvuzqlNsAqyJ3Fb5l19zmktxBqOX6EopQhx-lDheAk"
   },
   {
     "name": "Mercedes-Benz CLA-класс",
@@ -328,7 +328,7 @@ const carsData = [
     "transmission": "Робот",
     "category": "coupe",
     "badge": "Премиум",
-    "image": "../photo/Mercedes-Benz CLA-класс 1.3 AMT, 2022, 46 077 км.D-G3CUxWRvHpY33McsQTLjQnmgf2VCJEt3u2-fgcKGI"
+    "image": "photo/Mercedes-Benz CLA-класс 1.3 AMT, 2022, 46 077 км.D-G3CUxWRvHpY33McsQTLjQnmgf2VCJEt3u2-fgcKGI"
   }
 ];
 
