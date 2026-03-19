@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — i-CAR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="../images/icarlog.png" alt="i-CAR Logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../index.html#catalog">Каталог</a></li>
+                    <li><a href="../index.html#services">Услуги</a></li>
+                    <li><a href="../index.html#about">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="tel:+79118508844" class="phone">+7 (911) 850-88-44</a>
+                    <button class="btn btn-outline">Заказать звонок</button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Наши <span>контакты</span></h1>
+            <p>Свяжитесь с нами любым удобным способом</p>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts-page">
+        <div class="container">
+            <div class="contacts-wrapper">
+                <!-- Контактная информация -->
+                <div class="contacts-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Адрес</h3>
+                        <p>г. Калининград, ул. Энергетиков, д. 23</p>
+                        <a href="#" class="contact-link">Показать на карте</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Телефон</h3>
+                        <p><a href="tel:+79118508844">+7 (911) 850-88-44</a></p>
+                        <p class="contact-note">Ежедневно с 9:00 до 21:00</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@icar.ru">info@icar.ru</a></p>
+                        <p class="contact-note">Отвечаем в течение 2 часов</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3>Telegram</h3>
+                        <p><a href="#">@iCAR</a></p>
+                        <p class="contact-note">Быстрая связь 24/7</p>
+                    </div>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="contact-form-wrapper">
+                    <h2>Напишите нам</h2>
+                    <p>Заполните форму и мы ответим вам в ближайшее время</p>
+
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ваше имя *</label>
+                                <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.ru">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Тема обращения</label>
+                            <select id="subject" name="subject">
+                                <option value="">Выберите тему</option>
+                                <option value="buy">Покупка автомобиля</option>
+                                <option value="sell">Продажа автомобиля</option>
+                                <option value="tradein">Trade-In</option>
+                                <option value="service">Сервис</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Сообщение *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Опишите ваш вопрос..."
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="agree" checked required>
+                                <span class="checkmark"></span>
+                                <span>Я согласен на обработку <a href="#">персональных данных</a></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-paper-plane"></i> Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Карта -->
+            <div class="contacts-map">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4441796624835!2d37.6173!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzcnMDIuMyJF!5e0!3m2!1sru!2sru!4v1234567890"
+                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Офисы -->
+            <div class="offices-section">
+                <h2>Наши офисы</h2>
+
+                <div class="offices-grid">
+                    <div class="office-card">
+                        <div class="office-image">
+                            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3dab?w=600"
+                                alt="Офис в Москве">
+                            <div class="office-badge">Главный офис</div>
+                        </div>
+                        <div class="office-info">
+                            <h3>Москва</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> ул. Автомобильная, д. 15</p>
+                            <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                            <p><i class="fas fa-clock"></i> Ежедневно с 9:00 до 21:00</p>
+                            <div class="office-services">
+                                <span>Покупка</span>
+                                <span>Продажа</span>
+                                <span>Trade-In</span>
+                                <span>Сервис</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="office-card">
+                        <div class="office-image">
+                            <img src="https://images.unsplash.com/photo-1552519507-cf0d5a6e5d0d?w=600"
+                                alt="Офис в Санкт-Петербурге">
+                            <div class="office-badge">Филиал</div>
+                        </div>
+                        <div class="office-info">
+                            <h3>Санкт-Петербург</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Невский проспект, д. 100</p>
+                            <p><i class="fas fa-phone"></i> +7 (812) 123-45-67</p>
+                            <p><i class="fas fa-clock"></i> Ежедневно с 10:00 до 20:00</p>
+                            <div class="office-services">
+                                <span>Покупка</span>
+                                <span>Продажа</span>
+                                <span>Trade-In</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="../images/icarlog.png" alt="i-CAR Logo">
+                    </div>
+                    <p>Ваш надёжный партнёр в мире автомобилей премиум класса</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="../pages/catalog.html">Каталог</a></li>
+                        <li><a href="../index.html#services">Услуги</a></li>
+                        <li><a href="../index.html#about">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#">Покупка авто</a></li>
+                        <li><a href="#">Продажа авто</a></li>
+                        <li><a href="#">Trade-In</a></li>
+                        <li><a href="#">Автоподбор</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79118508844"
+                            style="color: inherit; text-decoration: none;">+7 (911) 850-88-44</a></p>
+                    <p><i class="fas fa-envelope"></i> info@icar.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Калининград, ул. Энергетиков, 23</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 i-CAR. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Договор оферты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contacts.js"></script>
+</body>
+
+</html>

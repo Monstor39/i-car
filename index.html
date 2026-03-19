@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-CAR — Покупка и продажа автомобилей</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/icarlog.png" alt="i-CAR Logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="tel:+79118508844" class="phone">+7 (911) 850-88-44</a>
+                    <button class="btn btn-outline">Заказать звонок</button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Премиум автомобили с выгодой до 30%</div>
+                <h1 class="hero-title">
+                    <span class="title-line">Автомобили</span>
+                    <span class="title-line">премиум класса</span>
+                    <span class="title-line">по лучшей цене</span>
+                </h1>
+                <p class="hero-subtitle">Покупка, продажа и обмен автомобилей с гарантией лучшей цены. Более 500
+                    автомобилей в наличии. Полное юридическое сопровождение.</p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="btn btn-primary btn-lg">
+                        <i class="fas fa-car"></i> Смотреть каталог
+                    </a>
+                    <a href="#contacts" class="btn btn-transparent btn-lg">
+                        <i class="fas fa-phone"></i> Связаться с нами
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Авто в наличии</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="12">0</span>
+                        <span class="stat-label">Лет опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-label">% Клиентов довольны</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Каталог автомобилей -->
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Популярные <span>автомобили</span></h2>
+                <p class="section-subtitle">Выберите автомобиль своей мечты из нашего каталога</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="sedan">Седаны</button>
+                <button class="filter-btn" data-filter="suv">Внедорожники</button>
+                <button class="filter-btn" data-filter="sport">Спорткары</button>
+                <button class="filter-btn" data-filter="electric">Электро</button>
+            </div>
+
+            <div class="cars-grid">
+                <!-- Карточка авто 1 -->
+                <div class="car-card" data-category="sedan">
+                    <div class="car-image">
+                        <img src="images/bmw.jpg" alt="BMW 5 Series">
+                        <div class="car-badge">Новинка</div>
+                        <div class="car-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                            <button class="action-btn"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">BMW 5 Series</h3>
+                        <p class="car-price">4 500 000 ₽</p>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 25 000 км</span>
+                            <span><i class="fas fa-gas-pump"></i> Бензин</span>
+                            <span><i class="fas fa-cog"></i> Автомат</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Карточка авто 2 -->
+                <div class="car-card" data-category="suv">
+                    <div class="car-image">
+                        <img src="images/mercedes.jpg" alt="Mercedes GLE">
+                        <div class="car-badge hot">Хит</div>
+                        <div class="car-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                            <button class="action-btn"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Mercedes-Benz GLE</h3>
+                        <p class="car-price">7 200 000 ₽</p>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 15 000 км</span>
+                            <span><i class="fas fa-gas-pump"></i> Дизель</span>
+                            <span><i class="fas fa-cog"></i> Автомат</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Карточка авто 3 -->
+                <div class="car-card" data-category="sport">
+                    <div class="car-image">
+                        <img src="images/porsche.jpg" alt="Porsche 911">
+                        <div class="car-badge premium">Премиум</div>
+                        <div class="car-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                            <button class="action-btn"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Porsche 911</h3>
+                        <p class="car-price">12 500 000 ₽</p>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 8 000 км</span>
+                            <span><i class="fas fa-gas-pump"></i> Бензин</span>
+                            <span><i class="fas fa-cog"></i> Робот</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Карточка авто 4 -->
+                <div class="car-card" data-category="electric">
+                    <div class="car-image">
+                        <img src="images/tesla.jpg" alt="Tesla Model S">
+                        <div class="car-badge eco">Электро</div>
+                        <div class="car-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                            <button class="action-btn"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Tesla Model S</h3>
+                        <p class="car-price">6 800 000 ₽</p>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 12 000 км</span>
+                            <span><i class="fas fa-bolt"></i> Электро</span>
+                            <span><i class="fas fa-cog"></i> Автомат</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Карточка авто 5 -->
+                <div class="car-card" data-category="sedan">
+                    <div class="car-image">
+                        <img src="images/audi.jpg" alt="Audi A8">
+                        <div class="car-badge">Новинка</div>
+                        <div class="car-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                            <button class="action-btn"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Audi A8</h3>
+                        <p class="car-price">5 900 000 ₽</p>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 20 000 км</span>
+                            <span><i class="fas fa-gas-pump"></i> Бензин</span>
+                            <span><i class="fas fa-cog"></i> Автомат</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Карточка авто 6 -->
+                <div class="car-card" data-category="suv">
+                    <div class="car-image">
+                        <img src="images/range-rover.jpg" alt="Range Rover">
+                        <div class="car-badge premium">Премиум</div>
+                        <div class="car-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-expand"></i></button>
+                            <button class="action-btn"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Range Rover Sport</h3>
+                        <p class="car-price">8 500 000 ₽</p>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 18 000 км</span>
+                            <span><i class="fas fa-gas-pump"></i> Дизель</span>
+                            <span><i class="fas fa-cog"></i> Автомат</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-actions">
+                <a href="pages/catalog.html" class="btn btn-outline btn-lg">
+                    Смотреть весь каталог <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши <span>услуги</span></h2>
+                <p class="section-subtitle">Полный спектр услуг для покупки и продажи автомобилей</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Покупка авто</h3>
+                    <p>Подбор и покупка автомобиля по вашим параметрам. Проверка истории и технического состояния.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Проверка по базам</li>
+                        <li><i class="fas fa-check"></i> Диагностика</li>
+                        <li><i class="fas fa-check"></i> Оформление документов</li>
+                    </ul>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-badge">Популярное</div>
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Продажа авто</h3>
+                    <p>Быстрая продажа вашего автомобиля по лучшей рыночной цене. Оценка за 30 минут.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Бесплатная оценка</li>
+                        <li><i class="fas fa-check"></i> Выплата в день обращения</li>
+                        <li><i class="fas fa-check"></i> Юридическое сопровождение</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Trade-In</h3>
+                    <p>Обмен вашего автомобиля на новый с доплатой. Выгодные условия и быстрый процесс.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Оценка за 1 час</li>
+                        <li><i class="fas fa-check"></i> Скидка на новый авто</li>
+                        <li><i class="fas fa-check"></i> Оформление за 1 день</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Автоподбор</h3>
+                    <p>Профессиональный подбор автомобиля под ваш бюджет и требования. Экономия времени и денег.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Анализ рынка</li>
+                        <li><i class="fas fa-check"></i> Проверка 100+ параметров</li>
+                        <li><i class="fas fa-check"></i> Торги с продавцом</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="images/about-main.jpg" alt="Автомобили i-CAR">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="images/about-secondary.jpg" alt="Автосалон">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">12</span>
+                        <span class="exp-text">лет опыта</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Почему выбирают <span>i-CAR</span></h2>
+                    <p class="about-text">Мы работаем на автомобильном рынке более 12 лет и за это время помогли тысячам
+                        клиентов найти автомобиль своей мечты. Наша миссия — сделать процесс покупки и продажи
+                        автомобилей максимально простым, прозрачным и выгодным.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Гарантия юридической чистоты</h4>
+                                <p>Проверяем каждый автомобиль по 50+ параметрам</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-percent"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Лучшие цены на рынке</h4>
+                                <p>Гарантируем выгодные условия покупки</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Экономия времени</h4>
+                                <p>Оформление всех документов за 1 день</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Поддержка 24/7</h4>
+                                <p>Всегда на связи и готовы помочь</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA секция -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готовы найти автомобиль мечты?</h2>
+                <p>Оставьте заявку и получите персональное предложение в течение 15 минут</p>
+                <form class="cta-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit" class="btn btn-primary btn-lg">Получить предложение</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши <span>контакты</span></h2>
+                <p class="section-subtitle">Свяжитесь с нами любым удобным способом</p>
+            </div>
+
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Адрес</h4>
+                            <p>г. Калининград, ул. Энергетиков, д. 23</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Телефон</h4>
+                            <p><a href="tel:+79118508844">+7 (911) 850-88-44</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@autoprime.ru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Режим работы</h4>
+                            <p>Ежедневно с 9:00 до 21:00</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Интерактивная карта</span>
+                        <p>г. Москва, ул. Автомобильная, д. 15</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/icarlog.png" alt="i-CAR Logo">
+                    </div>
+                    <p>Ваш надёжный партнёр в мире автомобилей премиум класса</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#about">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#">Покупка авто</a></li>
+                        <li><a href="#">Продажа авто</a></li>
+                        <li><a href="#">Trade-In</a></li>
+                        <li><a href="#">Автоподбор</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79118508844"
+                            style="color: inherit; text-decoration: none;">+7 (911) 850-88-44</a></p>
+                    <p><i class="fas fa-envelope"></i> info@icar.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Калининград, ул. Энергетиков, 23</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 i-CAR. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Договор оферты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <h3>Заказать звонок</h3>
+                <p>Оставьте свои контакты и мы перезвоним вам в течение 5 минут</p>
+                <form class="modal-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit" class="btn btn-primary btn-block">Жду звонка</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
